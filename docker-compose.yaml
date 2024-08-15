@@ -1,0 +1,36 @@
+version: '3.9'
+
+services:
+
+  frontend:
+    build: frontend/.
+    ports:
+      - "8501:8501"
+    depends_on:
+      - rag_api
+    restart: always
+    volumes:
+      - ./frontend:/app
+    env_file:
+      - frontend.env
+    networks:
+      - app-network
+    
+  rag_api:
+    build: backend/.
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - api_data:/app/data # Custom volume for web service data
+      - ./backend:/app
+    networks:
+      - app-network
+
+volumes:
+  api_data:
+    driver: local # Use the local driver for web service data
+
+networks:
+  app-network:

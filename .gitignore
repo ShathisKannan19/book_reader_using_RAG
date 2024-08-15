@@ -3,3 +3,7 @@
 frontend.env
 /backend/src/chroma
 /backend/src/data
+/backend/src/controller/__pycache__/chat_controller.cpython-312.pyc
+/backend/src/models/__pycache__/chat_model.cpython-312.pyc
+/backend/src/services/__pycache__/chat_service.cpython-312.pyc
+/backend/__pycache__/main.cpython-312.pyc

@@ -3,7 +3,7 @@ import requests
 import time
 import os
 from dotenv import load_dotenv
-dotenv_path = os.path.realpath(filename="../frontend.env")
+dotenv_path = os.path.join(os.getcwd(), 'frontend.env')
 load_dotenv(dotenv_path)
 # print(dotenv_path)
 
