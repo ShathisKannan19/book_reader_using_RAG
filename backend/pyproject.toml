@@ -17,6 +17,7 @@ langchain-groq = "^0.1.9"
 langchain-community = "^0.2.11"
 langchain-text-splitters = "^0.2.2"
 python-multipart = "^0.0.9"
+pypdf == "*"
 
 
 [build-system]

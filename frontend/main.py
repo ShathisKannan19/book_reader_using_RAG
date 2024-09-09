@@ -59,7 +59,7 @@ with st.sidebar:
         files = {"file": (f"{uploaded_file.name}.pdf", uploaded_file.getvalue(), "application/pdf")}
         
         # Send the file to the FastAPI backend
-        response = requests.post("http://localhost:8000/api/uploadfile/", files=files)
+        response = requests.post("http://rag_api:8000/api/uploadfile/", files=files)
         
         if response.status_code == 200:
             st.success("PDF uploaded successfully!")
